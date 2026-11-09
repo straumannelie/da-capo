@@ -1,0 +1,14 @@
+{
+	"name": "Da capo",
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+	"features": {
+		"ghcr.io/devcontainers/features/python:1": { "version": "3.12" }
+	},
+	"postCreateCommand": "pip install --user uv && cd app && npm install && cd ../pipeline && ~/.local/bin/uv sync",
+	"forwardPorts": [5173],
+	"customizations": {
+		"vscode": {
+			"extensions": ["svelte.svelte-vscode", "charliermarsh.ruff", "dbaeumer.vscode-eslint"]
+		}
+	}
+}
